@@ -10,10 +10,10 @@ A session appears in a dated window only if it recorded when its runs ended. Ses
 
 | window | runs | gave up | median seconds | longest | median round trips | median seconds each |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| Last 7 days | 3 | 0% | 149 | 3,201 | 16 | 21.3 |
-| Last 30 days | 3 | 0% | 149 | 3,201 | 16 | 21.3 |
-| Last year | 3 | 0% | 149 | 3,201 | 16 | 21.3 |
-| All time | 3 | 0% | 149 | 3,201 | 16 | 21.3 |
+| Last 7 days | 4 | 25% | 149 | 3,201 | 16 | 75.0 |
+| Last 30 days | 4 | 25% | 149 | 3,201 | 16 | 75.0 |
+| Last year | 4 | 25% | 149 | 3,201 | 16 | 75.0 |
+| All time | 4 | 25% | 149 | 3,201 | 16 | 75.0 |
 
 **Gave up** is every ending that is not `completed` — a ceiling reached, a person asking, a provider hanging up, a loop cut short. Each one is a mechanism deciding the run should not continue, which is worth watching whether or not it was right.
 
@@ -22,12 +22,13 @@ What is left over is not the same as work delivered. `completed` is the core say
 | ended because | runs |
 | --- | ---: |
 | `completed` | 3 |
+| `stopped` | 1 |
 
 ## Last 7 days
 
 2 sessions.
 
-**Ran to an end without a report:** 0 of 2 sessions whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
+**Ran to an end without a report:** 0 of 1 session whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
 
 **1,629,183 tokens** over 2 runs that reported them, **98.5% of it prompt** — what the agents were made to read, not what they wrote. Anything spent on making runs cheaper belongs on that side. No money here, deliberately: of the four providers only one reports a cost, and a price table goes quietly stale and then prints confident wrong numbers.
 
@@ -36,7 +37,7 @@ What is left over is not the same as work delivered. `completed` is the core say
 | | p50 | p90 | p99 | max | total |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | tokens per run | 1,027,355 | 1,027,355 | 1,027,355 | 1,027,355 | 1,629,183 |
-| messages per session | 95 | 95 | 95 | 95 | 154 |
+| messages per session | 99 | 99 | 99 | 99 | 158 |
 
 | agent | sessions | share |
 | --- | ---: | ---: |
@@ -48,7 +49,7 @@ What is left over is not the same as work delivered. `completed` is the core say
 | tool | calls | failed | refused | failure rate |
 | --- | ---: | ---: | ---: | ---: |
 | `read` | 24 | 0 | 0 | 0% |
-| `bash` | 17 | 1 | 3 | 5.9% |
+| `bash` | 18 | 1 | 4 | 5.6% |
 | `fetch` | 15 | 1 | 0 | 6.7% |
 | `grep` | 10 | 0 | 0 | 0% |
 | `list` | 6 | 0 | 0 | 0% |
@@ -70,10 +71,10 @@ What the agents do when they reach for a shell. `search` without a matching `ope
 
 | act | calls | share |
 | --- | ---: | ---: |
-| `other` | 14 | 82.4% |
-| `edit` | 1 | 5.9% |
-| `open` | 1 | 5.9% |
-| `verify` | 1 | 5.9% |
+| `other` | 15 | 83.3% |
+| `edit` | 1 | 5.6% |
+| `open` | 1 | 5.6% |
+| `verify` | 1 | 5.6% |
 
 No skill recorded.
 
@@ -81,7 +82,7 @@ No skill recorded.
 
 2 sessions.
 
-**Ran to an end without a report:** 0 of 2 sessions whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
+**Ran to an end without a report:** 0 of 1 session whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
 
 **1,629,183 tokens** over 2 runs that reported them, **98.5% of it prompt** — what the agents were made to read, not what they wrote. Anything spent on making runs cheaper belongs on that side. No money here, deliberately: of the four providers only one reports a cost, and a price table goes quietly stale and then prints confident wrong numbers.
 
@@ -90,7 +91,7 @@ No skill recorded.
 | | p50 | p90 | p99 | max | total |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | tokens per run | 1,027,355 | 1,027,355 | 1,027,355 | 1,027,355 | 1,629,183 |
-| messages per session | 95 | 95 | 95 | 95 | 154 |
+| messages per session | 99 | 99 | 99 | 99 | 158 |
 
 | agent | sessions | share |
 | --- | ---: | ---: |
@@ -102,7 +103,7 @@ No skill recorded.
 | tool | calls | failed | refused | failure rate |
 | --- | ---: | ---: | ---: | ---: |
 | `read` | 24 | 0 | 0 | 0% |
-| `bash` | 17 | 1 | 3 | 5.9% |
+| `bash` | 18 | 1 | 4 | 5.6% |
 | `fetch` | 15 | 1 | 0 | 6.7% |
 | `grep` | 10 | 0 | 0 | 0% |
 | `list` | 6 | 0 | 0 | 0% |
@@ -124,10 +125,10 @@ What the agents do when they reach for a shell. `search` without a matching `ope
 
 | act | calls | share |
 | --- | ---: | ---: |
-| `other` | 14 | 82.4% |
-| `edit` | 1 | 5.9% |
-| `open` | 1 | 5.9% |
-| `verify` | 1 | 5.9% |
+| `other` | 15 | 83.3% |
+| `edit` | 1 | 5.6% |
+| `open` | 1 | 5.6% |
+| `verify` | 1 | 5.6% |
 
 No skill recorded.
 
@@ -135,7 +136,7 @@ No skill recorded.
 
 2 sessions.
 
-**Ran to an end without a report:** 0 of 2 sessions whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
+**Ran to an end without a report:** 0 of 1 session whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
 
 **1,629,183 tokens** over 2 runs that reported them, **98.5% of it prompt** — what the agents were made to read, not what they wrote. Anything spent on making runs cheaper belongs on that side. No money here, deliberately: of the four providers only one reports a cost, and a price table goes quietly stale and then prints confident wrong numbers.
 
@@ -144,7 +145,7 @@ No skill recorded.
 | | p50 | p90 | p99 | max | total |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | tokens per run | 1,027,355 | 1,027,355 | 1,027,355 | 1,027,355 | 1,629,183 |
-| messages per session | 95 | 95 | 95 | 95 | 154 |
+| messages per session | 99 | 99 | 99 | 99 | 158 |
 
 | agent | sessions | share |
 | --- | ---: | ---: |
@@ -156,7 +157,7 @@ No skill recorded.
 | tool | calls | failed | refused | failure rate |
 | --- | ---: | ---: | ---: | ---: |
 | `read` | 24 | 0 | 0 | 0% |
-| `bash` | 17 | 1 | 3 | 5.9% |
+| `bash` | 18 | 1 | 4 | 5.6% |
 | `fetch` | 15 | 1 | 0 | 6.7% |
 | `grep` | 10 | 0 | 0 | 0% |
 | `list` | 6 | 0 | 0 | 0% |
@@ -178,10 +179,10 @@ What the agents do when they reach for a shell. `search` without a matching `ope
 
 | act | calls | share |
 | --- | ---: | ---: |
-| `other` | 14 | 82.4% |
-| `edit` | 1 | 5.9% |
-| `open` | 1 | 5.9% |
-| `verify` | 1 | 5.9% |
+| `other` | 15 | 83.3% |
+| `edit` | 1 | 5.6% |
+| `open` | 1 | 5.6% |
+| `verify` | 1 | 5.6% |
 
 No skill recorded.
 
@@ -189,7 +190,7 @@ No skill recorded.
 
 2 sessions.
 
-**Ran to an end without a report:** 0 of 2 sessions whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
+**Ran to an end without a report:** 0 of 1 session whose last run the core recorded as `completed` — 0%. These are not runs that gave up: nothing stopped them, they simply ended without writing a closing line, so the work is in a saved session and nowhere a person or the next agent reads.
 
 **1,629,183 tokens** over 2 runs that reported them, **98.5% of it prompt** — what the agents were made to read, not what they wrote. Anything spent on making runs cheaper belongs on that side. No money here, deliberately: of the four providers only one reports a cost, and a price table goes quietly stale and then prints confident wrong numbers.
 
@@ -198,7 +199,7 @@ No skill recorded.
 | | p50 | p90 | p99 | max | total |
 | --- | ---: | ---: | ---: | ---: | ---: |
 | tokens per run | 1,027,355 | 1,027,355 | 1,027,355 | 1,027,355 | 1,629,183 |
-| messages per session | 95 | 95 | 95 | 95 | 154 |
+| messages per session | 99 | 99 | 99 | 99 | 158 |
 
 | agent | sessions | share |
 | --- | ---: | ---: |
@@ -210,7 +211,7 @@ No skill recorded.
 | tool | calls | failed | refused | failure rate |
 | --- | ---: | ---: | ---: | ---: |
 | `read` | 24 | 0 | 0 | 0% |
-| `bash` | 17 | 1 | 3 | 5.9% |
+| `bash` | 18 | 1 | 4 | 5.6% |
 | `fetch` | 15 | 1 | 0 | 6.7% |
 | `grep` | 10 | 0 | 0 | 0% |
 | `list` | 6 | 0 | 0 | 0% |
@@ -232,10 +233,10 @@ What the agents do when they reach for a shell. `search` without a matching `ope
 
 | act | calls | share |
 | --- | ---: | ---: |
-| `other` | 14 | 82.4% |
-| `edit` | 1 | 5.9% |
-| `open` | 1 | 5.9% |
-| `verify` | 1 | 5.9% |
+| `other` | 15 | 83.3% |
+| `edit` | 1 | 5.6% |
+| `open` | 1 | 5.6% |
+| `verify` | 1 | 5.6% |
 
 No skill recorded.
 
