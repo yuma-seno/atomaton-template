@@ -2,27 +2,29 @@
   {
     "path": "sessions/issue-3/atomaton.json",
     "agent": "atomaton",
-    "messages": 75,
-    "calls": 47,
-    "failed": 2,
+    "messages": 95,
+    "calls": 55,
+    "failed": 3,
     "refused": 3,
     "skills": [],
-    "reported": false,
+    "reported": true,
     "tools": {
       "list": 5,
-      "read": 5,
-      "bash": 14,
+      "read": 6,
+      "bash": 17,
       "glob": 1,
       "fetch": 14,
       "grep": 1,
       "get_branch": 1,
       "write": 2,
-      "edit": 1,
-      "commit_and_push": 2,
-      "create_pr": 1
+      "edit": 2,
+      "commit_and_push": 3,
+      "create_pr": 1,
+      "check_merge_readiness": 1,
+      "attach_file": 1
     },
     "acts": {
-      "other": 11,
+      "other": 14,
       "open": 1,
       "verify": 1,
       "edit": 1
@@ -58,6 +60,32 @@
           }
         },
         "started": "2026-11-28T10:21:34Z"
+      },
+      {
+        "compactions": 0,
+        "ended": "2026-11-28T11:20:05Z",
+        "ended_because": "completed",
+        "iterations": 7,
+        "loop_recoveries": 0,
+        "messages": 95,
+        "seconds": 149,
+        "server_calls": {
+          "attachments": {
+            "attach_file": 1
+          },
+          "files": {
+            "edit": 1,
+            "read": 1
+          },
+          "github": {
+            "check_merge_readiness": 1,
+            "commit_and_push": 1
+          },
+          "shell": {
+            "bash": 3
+          }
+        },
+        "started": "2026-11-28T11:17:36Z"
       }
     ]
   },
