@@ -2,16 +2,16 @@
   {
     "path": "sessions/issue-3/atomaton.json",
     "agent": "atomaton",
-    "messages": 95,
-    "calls": 55,
+    "messages": 99,
+    "calls": 56,
     "failed": 3,
-    "refused": 3,
+    "refused": 4,
     "skills": [],
-    "reported": true,
+    "reported": false,
     "tools": {
       "list": 5,
       "read": 6,
-      "bash": 17,
+      "bash": 18,
       "glob": 1,
       "fetch": 14,
       "grep": 1,
@@ -24,7 +24,7 @@
       "attach_file": 1
     },
     "acts": {
-      "other": 14,
+      "other": 15,
       "open": 1,
       "verify": 1,
       "edit": 1
@@ -86,6 +86,21 @@
           }
         },
         "started": "2026-11-28T11:17:36Z"
+      },
+      {
+        "compactions": 0,
+        "ended": "2026-11-28T11:29:02Z",
+        "ended_because": "stopped",
+        "iterations": 1,
+        "loop_recoveries": 0,
+        "messages": 99,
+        "seconds": 75,
+        "server_calls": {
+          "shell": {
+            "bash": 1
+          }
+        },
+        "started": "2026-11-28T11:27:47Z"
       }
     ]
   },
